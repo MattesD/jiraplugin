@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AutoSetup</title>
+        <meta name="description" content="Hauptseite des Jira-Plugins">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+
+        <h1>AutoSetup</h1>
+
+        <p>
+            Dieses Plugin bietet die Möglichkeit Nutzer und Gruppen und Projekte auf Grundlage einer csv-Datei automatisiert anlegen zu lassen.
+            <br>
+            Außerdem können hier die Atlassian-Tools auswählt werden, für welche zusätzlich Bereiche und/oder Projekte angelegt werden sollen.
+        </p>
+        
+        <hr>
+
+        <form method="post" enctype="multipart/form-data">
+            <label>Lade hier die csv-Datei hoch.
+                <input name="datei" type="file" size="50" accept="text/*"> 
+            </label>
+            <br>
+            <button>Hochladen</button>
+        </form>
+        
+        <br>
+        
+        <h4>Gefundene Gruppen und Nutzer:</h4>
+        <h6>(bitte markieren, welche Gruppen und Nutzer angelegt werden sollen)</h6>
+
+        <table>
+            <tr>
+                <th>Gruppe A
+                    <input type="checkbox" id="group1"
+                 name="groups" value="group1">
+                </th>
+                <th>Gruppe B
+                    <input type="checkbox" id="group2"
+                 name="groups" value="group2">
+                </th>
+                <th>Gruppe C
+                    <input type="checkbox" id="group3"
+                 name="groups" value="group3">
+                </th>
+                <th>Gruppe ...
+                    <input type="checkbox" id="group4"
+                 name="groups" value="group4">
+                </th>
+                <th>Lehrende
+                    <input type="checkbox" id="instructors"
+                 name="groups" value="instructors">
+                </th>
+                <th>suche keine Gruppe
+                    <input type="checkbox" id="nonparticipating"
+                 name="groups" value="nonparticipating">
+                </th>
+                <th>Gruppenlos
+                    <input type="checkbox" id="groupless"
+                 name="groups" value="groupless">
+                </th>
+            </tr>
+            <tr>
+                <td>vorname1, nachname1</td>
+                <td>vorname1, nachname1</td>
+                <td>vorname1, nachname1</td>
+                <td>vorname1, nachname1</td>
+                <td>vorname1, nachname1</td>
+                <td>vorname1, nachname1</td>
+                <td>vorname1, nachname1</td>
+            </tr>
+            <tr>
+                <td>vorname2, nachname2</td>
+                <td>vorname2, nachname2</td>
+                <td>vorname2, nachname2</td>
+                <td>vorname2, nachname2</td>
+                <td>vorname2, nachname2</td>
+                <td>vorname2, nachname2</td>
+                <td>vorname2, nachname2</td>
+            </tr>
+            <tr>
+                <td>vorname3, nachname3</td>
+                <td>vorname3, nachname3</td>
+                <td>vorname3, nachname3</td>
+                <td>vorname3, nachname3</td>
+                <td>vorname3, nachname3</td>
+                <td>vorname3, nachname3</td>
+                <td>vorname3, nachname3</td>
+            </tr>
+            <tr>
+                <td>vorname..., nachname...</td>
+                <td>vorname..., nachname...</td>
+                <td>vorname..., nachname...</td>
+                <td>vorname..., nachname...</td>
+                <td>vorname..., nachname...</td>
+                <td>vorname..., nachname...</td>
+                <td>vorname..., nachname...</td>
+            </tr>
+        </table>
+        
+        <br>
+
+        <hr>
+        
+        <form>
+            <p>Bitte wähle die benötigten Atlassian-Tools aus:</p>
+            <div>
+                <input type="checkbox" id="tool1"
+                name="tool" value="confluence">
+                <label for="tool1">
+                    Confluence
+                </label>
+
+                <input type="checkbox" id="tool2"
+                name="tool" value="bitbucket">
+                <label for="tool2">
+                    Bitbucket
+                </label>
+
+                <input type="checkbox" id="tool3"
+                 name="tool" value="bamboo">
+                <label for="tool3">
+                    Bamboo
+                </label>
+            </div>
+        </form>
+        
+        <br>
+
+        <hr>
+        
+        <button>Anwenden</button>
+    </body>
+</html>
